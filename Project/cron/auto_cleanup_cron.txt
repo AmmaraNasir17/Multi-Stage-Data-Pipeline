@@ -1,0 +1,21 @@
+# ═══════════════════════════════════════════════════════════
+#  auto_cleanup_cron.txt — Automatic Cleanup Schedule
+#  Keeps the project clean by removing old files regularly.
+#
+#  HOW TO INSTALL:
+#  1. Open crontab editor:  crontab -e
+#  2. Copy and paste the lines below (only ones you need)
+#  3. Save and exit
+# ═══════════════════════════════════════════════════════════
+
+# ── Clean temp files every day at 3:00 AM ──
+0 3 * * * cd /path/to/project && bash scripts/recovery/cleanup.sh --temp >> /path/to/project/logs/cron.log 2>&1
+
+# ── Clean old backups every Sunday at 4:00 AM ──
+0 4 * * 0 cd /path/to/project && bash scripts/recovery/cleanup.sh --backups >> /path/to/project/logs/cron.log 2>&1
+
+# ── Clear log files every month on 1st at 5:00 AM ──
+0 5 1 * * cd /path/to/project && bash scripts/recovery/cleanup.sh --logs >> /path/to/project/logs/cron.log 2>&1
+
+# ── Full cleanup first day of every month at midnight ──
+0 0 1 * * cd /path/to/project && bash scripts/recovery/cleanup.sh --all >> /path/to/project/logs/cron.log 2>&1

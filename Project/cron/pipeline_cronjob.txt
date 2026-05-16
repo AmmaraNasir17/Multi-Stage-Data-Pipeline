@@ -1,0 +1,38 @@
+# ═══════════════════════════════════════════════════════════
+#  pipeline_cronjob.txt — Cron Job Definitions
+#  These schedule the pipeline to run automatically.
+#
+#  HOW TO INSTALL:
+#  1. Open crontab editor:  crontab -e
+#  2. Copy and paste the lines below
+#  3. Save and exit
+#  4. Verify with:  crontab -l
+#
+#  IMPORTANT: Replace /path/to/project with your actual path
+#  Example: /mnt/c/Users/Cyber World/Desktop/multi_stage_data_pipeline/Project
+# ═══════════════════════════════════════════════════════════
+
+# -- Variables (set your actual project path here) --
+# PROJECT=/path/to/project
+# LOGFILE=$PROJECT/logs/cron.log
+
+# ── Run full pipeline every day at 2:00 AM ──
+0 2 * * * cd /path/to/project && bash main_pipeline.sh --reset >> /path/to/project/logs/cron.log 2>&1
+
+# ── Run pipeline every 6 hours ──
+0 */6 * * * cd /path/to/project && bash main_pipeline.sh --reset >> /path/to/project/logs/cron.log 2>&1
+
+# ── Run pipeline every hour (for high traffic servers) ──
+0 * * * * cd /path/to/project && bash main_pipeline.sh --reset >> /path/to/project/logs/cron.log 2>&1
+
+# ── Run pipeline every Monday at 6:00 AM (weekly) ──
+0 6 * * 1 cd /path/to/project && bash main_pipeline.sh --reset >> /path/to/project/logs/cron.log 2>&1
+
+# ── Run threshold checker every 30 minutes ──
+*/30 * * * * cd /path/to/project && bash scripts/alerts/threshold_checker.sh scan >> /path/to/project/logs/cron.log 2>&1
+
+# ── Generate detailed alerts every 4 hours ──
+0 */4 * * * cd /path/to/project && bash scripts/alerts/generate_alerts.sh >> /path/to/project/logs/cron.log 2>&1
+
+# ── Send email report every morning at 8:00 AM ──
+0 8 * * * cd /path/to/project && bash scripts/alerts/email_alert.sh >> /path/to/project/logs/cron.log 2>&1
