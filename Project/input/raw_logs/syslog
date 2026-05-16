@@ -1,0 +1,60 @@
+May 01 17:55:44 server kernel[4040]: ERROR: Out of memory - process killed
+May 02 01:42:39 server systemd[6503]: Started daily cleanup service
+May 02 05:34:09 server kernel[6033]: ERROR: Out of memory - process killed
+May 02 05:55:24 server systemd[1808]: Started daily cleanup service
+May 03 07:07:11 server systemd[5640]: Started daily cleanup service
+May 03 21:28:20 server apache2[3442]: ERROR: Connection refused
+May 04 16:42:30 server systemd[8370]: Started daily cleanup service
+May 06 09:07:21 server kernel[5691]: ERROR: Out of memory - process killed
+May 06 22:50:17 server systemd[3529]: Started daily cleanup service
+May 07 11:44:06 server apache2[5692]: ERROR: Connection refused
+May 08 00:35:17 server systemd[2471]: Started daily cleanup service
+May 08 02:21:28 server kernel[7573]: ERROR: Out of memory - process killed
+May 08 04:44:03 server kernel[8468]: ERROR: Out of memory - process killed
+May 08 14:39:19 server kernel[4458]: ERROR: Out of memory - process killed
+May 08 16:12:39 server systemd[3160]: Started daily cleanup service
+May 08 22:37:42 server apache2[1159]: ERROR: Connection refused
+May 09 11:21:22 server kernel[6330]: ERROR: Out of memory - process killed
+May 09 14:28:44 server kernel[6457]: ERROR: Out of memory - process killed
+May 10 02:01:35 server apache2[8347]: ERROR: Connection refused
+May 10 03:05:16 server systemd[9439]: Started daily cleanup service
+May 10 05:10:56 server apache2[5365]: ERROR: Connection refused
+May 10 16:56:02 server systemd[4590]: Started daily cleanup service
+May 11 04:49:46 server systemd[4837]: Started daily cleanup service
+May 11 13:31:23 server systemd[2032]: Started daily cleanup service
+May 11 17:03:16 server kernel[8331]: ERROR: Out of memory - process killed
+May 13 09:17:46 server apache2[6374]: ERROR: Connection refused
+May 14 05:10:16 server kernel[7127]: ERROR: Out of memory - process killed
+May 14 09:52:17 server systemd[6159]: Started daily cleanup service
+May 14 20:46:23 server systemd[3570]: Started daily cleanup service
+May 15 16:06:14 server systemd[4688]: Started daily cleanup service
+May 15 17:44:00 server systemd[6652]: Started daily cleanup service
+May 16 05:29:54 server kernel[8782]: ERROR: Out of memory - process killed
+May 16 17:21:30 server kernel[7370]: ERROR: Out of memory - process killed
+May 17 10:41:26 server systemd[1877]: Started daily cleanup service
+May 17 18:20:10 server kernel[7188]: ERROR: Out of memory - process killed
+May 18 02:19:49 server systemd[2752]: Started daily cleanup service
+May 19 10:27:13 server apache2[1460]: ERROR: Connection refused
+May 20 05:05:57 server apache2[1386]: ERROR: Connection refused
+May 20 08:01:57 server systemd[2116]: Started daily cleanup service
+May 20 14:02:53 server systemd[3323]: Started daily cleanup service
+May 20 15:39:43 server apache2[5173]: ERROR: Connection refused
+May 20 17:37:17 server kernel[6175]: ERROR: Out of memory - process killed
+May 22 00:52:05 server systemd[3176]: Started daily cleanup service
+May 23 04:34:02 server kernel[3618]: ERROR: Out of memory - process killed
+May 23 05:17:32 server systemd[5225]: Started daily cleanup service
+May 24 01:38:31 server kernel[1921]: ERROR: Out of memory - process killed
+May 25 02:54:38 server kernel[7929]: ERROR: Out of memory - process killed
+May 25 09:57:03 server systemd[2458]: Started daily cleanup service
+May 26 05:55:11 server systemd[9809]: Started daily cleanup service
+May 26 16:13:56 server systemd[4226]: Started daily cleanup service
+May 26 16:35:30 server systemd[6352]: Started daily cleanup service
+May 26 19:38:56 server systemd[5086]: Started daily cleanup service
+May 27 08:09:46 server systemd[1960]: Started daily cleanup service
+May 27 13:31:05 server apache2[4214]: ERROR: Connection refused
+May 27 19:08:23 server systemd[8004]: Started daily cleanup service
+May 27 23:04:19 server systemd[9118]: Started daily cleanup service
+May 27 23:17:41 server kernel[5097]: ERROR: Out of memory - process killed
+May 28 02:40:28 server kernel[3941]: ERROR: Out of memory - process killed
+May 28 13:14:00 server kernel[6698]: ERROR: Out of memory - process killed
+May 28 13:30:20 server systemd[8676]: Started daily cleanup service

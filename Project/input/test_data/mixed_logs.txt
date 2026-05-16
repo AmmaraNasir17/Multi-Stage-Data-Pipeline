@@ -1,0 +1,225 @@
+10.0.0.55 - - [16/May/2026:00:37:31 +0000] "POST /wp-admin HTTP/1.1" 500 3228 "-" "Mozilla/5.0"
+10.0.0.55 - - [16/May/2026:01:01:44 +0000] "POST /wp-admin HTTP/1.1" 500 2051 "-" "Mozilla/5.0"
+10.0.0.55 - - [16/May/2026:01:14:47 +0000] "POST /wp-admin HTTP/1.1" 500 2187 "-" "Mozilla/5.0"
+10.0.0.55 - - [16/May/2026:01:26:38 +0000] "POST /wp-admin HTTP/1.1" 500 278 "-" "Mozilla/5.0"
+10.0.0.55 - - [16/May/2026:02:14:37 +0000] "POST /wp-admin HTTP/1.1" 500 493 "-" "Mozilla/5.0"
+10.0.0.55 - - [16/May/2026:05:18:26 +0000] "POST /wp-admin HTTP/1.1" 500 1012 "-" "Mozilla/5.0"
+10.0.0.55 - - [16/May/2026:07:23:37 +0000] "POST /wp-admin HTTP/1.1" 500 255 "-" "Mozilla/5.0"
+10.0.0.55 - - [16/May/2026:08:28:09 +0000] "POST /wp-admin HTTP/1.1" 500 1743 "-" "Mozilla/5.0"
+10.0.0.55 - - [16/May/2026:18:31:23 +0000] "POST /wp-admin HTTP/1.1" 500 4986 "-" "Mozilla/5.0"
+10.0.0.55 - - [16/May/2026:23:32:26 +0000] "POST /wp-admin HTTP/1.1" 500 4795 "-" "Mozilla/5.0"
+192.168.1.100 - - [16/May/2026:00:14:47 +0000] "GET /admin HTTP/1.1" 403 856 "-" "curl/7.68.0"
+192.168.1.100 - - [16/May/2026:03:37:55 +0000] "GET /admin HTTP/1.1" 403 1938 "-" "curl/7.68.0"
+192.168.1.100 - - [16/May/2026:04:24:31 +0000] "GET /admin HTTP/1.1" 403 2734 "-" "curl/7.68.0"
+192.168.1.100 - - [16/May/2026:04:50:01 +0000] "GET /admin HTTP/1.1" 403 4590 "-" "curl/7.68.0"
+192.168.1.100 - - [16/May/2026:06:08:24 +0000] "GET /admin HTTP/1.1" 403 4207 "-" "curl/7.68.0"
+192.168.1.100 - - [16/May/2026:06:42:14 +0000] "GET /admin HTTP/1.1" 403 2099 "-" "curl/7.68.0"
+192.168.1.100 - - [16/May/2026:06:45:41 +0000] "GET /admin HTTP/1.1" 403 1175 "-" "curl/7.68.0"
+192.168.1.100 - - [16/May/2026:09:37:55 +0000] "GET /admin HTTP/1.1" 403 2426 "-" "curl/7.68.0"
+192.168.1.100 - - [16/May/2026:11:13:23 +0000] "GET /admin HTTP/1.1" 403 3936 "-" "curl/7.68.0"
+192.168.1.100 - - [16/May/2026:13:13:39 +0000] "GET /admin HTTP/1.1" 403 5075 "-" "curl/7.68.0"
+192.168.1.100 - - [16/May/2026:14:46:38 +0000] "GET /admin HTTP/1.1" 403 4293 "-" "curl/7.68.0"
+192.168.1.100 - - [16/May/2026:17:30:18 +0000] "GET /admin HTTP/1.1" 403 3968 "-" "curl/7.68.0"
+192.168.1.100 - - [16/May/2026:18:13:13 +0000] "GET /admin HTTP/1.1" 403 219 "-" "curl/7.68.0"
+192.168.1.100 - - [16/May/2026:18:17:35 +0000] "GET /admin HTTP/1.1" 403 332 "-" "curl/7.68.0"
+192.168.1.100 - - [16/May/2026:18:30:46 +0000] "GET /admin HTTP/1.1" 403 2974 "-" "curl/7.68.0"
+192.168.1.100 - - [16/May/2026:18:59:31 +0000] "GET /admin HTTP/1.1" 403 505 "-" "curl/7.68.0"
+192.168.1.100 - - [16/May/2026:20:17:37 +0000] "GET /admin HTTP/1.1" 403 2723 "-" "curl/7.68.0"
+192.168.1.100 - - [16/May/2026:20:33:43 +0000] "GET /admin HTTP/1.1" 403 1182 "-" "curl/7.68.0"
+192.168.1.100 - - [16/May/2026:22:03:55 +0000] "GET /admin HTTP/1.1" 403 2445 "-" "curl/7.68.0"
+192.168.1.100 - - [16/May/2026:22:07:25 +0000] "GET /admin HTTP/1.1" 403 3257 "-" "curl/7.68.0"
+192.168.1.2 - - [16/May/2026:00:46:24 +0000] "GET /index.html HTTP/1.1" 200 30143 "-" "Mozilla/5.0"
+192.168.1.2 - - [16/May/2026:01:37:06 +0000] "GET /index.html HTTP/1.1" 200 3799 "-" "Mozilla/5.0"
+192.168.1.2 - - [16/May/2026:02:34:00 +0000] "GET /index.html HTTP/1.1" 200 1342 "-" "Mozilla/5.0"
+192.168.1.2 - - [16/May/2026:04:32:38 +0000] "GET /index.html HTTP/1.1" 200 6469 "-" "Mozilla/5.0"
+192.168.1.2 - - [16/May/2026:04:43:46 +0000] "GET /index.html HTTP/1.1" 200 12980 "-" "Mozilla/5.0"
+192.168.1.2 - - [16/May/2026:04:53:36 +0000] "GET /index.html HTTP/1.1" 200 19264 "-" "Mozilla/5.0"
+192.168.1.2 - - [16/May/2026:06:03:38 +0000] "GET /index.html HTTP/1.1" 200 4412 "-" "Mozilla/5.0"
+192.168.1.2 - - [16/May/2026:06:18:33 +0000] "GET /index.html HTTP/1.1" 200 23836 "-" "Mozilla/5.0"
+192.168.1.2 - - [16/May/2026:06:39:42 +0000] "GET /index.html HTTP/1.1" 200 19205 "-" "Mozilla/5.0"
+192.168.1.2 - - [16/May/2026:07:34:47 +0000] "GET /index.html HTTP/1.1" 200 12022 "-" "Mozilla/5.0"
+192.168.1.2 - - [16/May/2026:08:33:41 +0000] "GET /index.html HTTP/1.1" 200 10047 "-" "Mozilla/5.0"
+192.168.1.2 - - [16/May/2026:09:23:18 +0000] "GET /index.html HTTP/1.1" 200 4748 "-" "Mozilla/5.0"
+192.168.1.2 - - [16/May/2026:09:31:47 +0000] "GET /index.html HTTP/1.1" 200 23305 "-" "Mozilla/5.0"
+192.168.1.2 - - [16/May/2026:12:05:42 +0000] "GET /index.html HTTP/1.1" 200 23338 "-" "Mozilla/5.0"
+192.168.1.2 - - [16/May/2026:12:24:53 +0000] "GET /index.html HTTP/1.1" 200 25837 "-" "Mozilla/5.0"
+192.168.1.2 - - [16/May/2026:13:22:46 +0000] "GET /index.html HTTP/1.1" 200 2795 "-" "Mozilla/5.0"
+192.168.1.2 - - [16/May/2026:13:49:24 +0000] "GET /index.html HTTP/1.1" 200 2144 "-" "Mozilla/5.0"
+192.168.1.2 - - [16/May/2026:14:34:05 +0000] "GET /index.html HTTP/1.1" 200 18955 "-" "Mozilla/5.0"
+192.168.1.2 - - [16/May/2026:14:55:10 +0000] "GET /index.html HTTP/1.1" 200 5444 "-" "Mozilla/5.0"
+192.168.1.2 - - [16/May/2026:14:59:31 +0000] "GET /index.html HTTP/1.1" 200 6814 "-" "Mozilla/5.0"
+192.168.1.2 - - [16/May/2026:15:02:20 +0000] "GET /index.html HTTP/1.1" 200 13781 "-" "Mozilla/5.0"
+192.168.1.2 - - [16/May/2026:15:31:07 +0000] "GET /index.html HTTP/1.1" 200 14547 "-" "Mozilla/5.0"
+192.168.1.2 - - [16/May/2026:17:08:19 +0000] "GET /index.html HTTP/1.1" 200 3679 "-" "Mozilla/5.0"
+192.168.1.2 - - [16/May/2026:17:13:37 +0000] "GET /index.html HTTP/1.1" 200 12857 "-" "Mozilla/5.0"
+192.168.1.2 - - [16/May/2026:17:14:22 +0000] "GET /index.html HTTP/1.1" 200 21063 "-" "Mozilla/5.0"
+192.168.1.2 - - [16/May/2026:17:51:06 +0000] "GET /index.html HTTP/1.1" 200 19443 "-" "Mozilla/5.0"
+192.168.1.2 - - [16/May/2026:17:54:42 +0000] "GET /index.html HTTP/1.1" 200 13570 "-" "Mozilla/5.0"
+192.168.1.2 - - [16/May/2026:17:54:59 +0000] "GET /index.html HTTP/1.1" 200 11623 "-" "Mozilla/5.0"
+192.168.1.2 - - [16/May/2026:18:18:42 +0000] "GET /index.html HTTP/1.1" 200 20832 "-" "Mozilla/5.0"
+192.168.1.2 - - [16/May/2026:19:45:46 +0000] "GET /index.html HTTP/1.1" 200 20654 "-" "Mozilla/5.0"
+192.168.1.2 - - [16/May/2026:20:15:03 +0000] "GET /index.html HTTP/1.1" 200 19699 "-" "Mozilla/5.0"
+192.168.1.2 - - [16/May/2026:20:22:10 +0000] "GET /index.html HTTP/1.1" 200 31381 "-" "Mozilla/5.0"
+192.168.1.2 - - [16/May/2026:20:32:02 +0000] "GET /index.html HTTP/1.1" 200 14097 "-" "Mozilla/5.0"
+192.168.1.2 - - [16/May/2026:20:37:23 +0000] "GET /index.html HTTP/1.1" 200 2070 "-" "Mozilla/5.0"
+192.168.1.2 - - [16/May/2026:20:49:00 +0000] "GET /index.html HTTP/1.1" 200 23619 "-" "Mozilla/5.0"
+192.168.1.2 - - [16/May/2026:20:52:33 +0000] "GET /index.html HTTP/1.1" 200 13390 "-" "Mozilla/5.0"
+192.168.1.2 - - [16/May/2026:21:06:51 +0000] "GET /index.html HTTP/1.1" 200 13300 "-" "Mozilla/5.0"
+192.168.1.2 - - [16/May/2026:22:26:01 +0000] "GET /index.html HTTP/1.1" 200 20420 "-" "Mozilla/5.0"
+192.168.1.2 - - [16/May/2026:22:27:15 +0000] "GET /index.html HTTP/1.1" 200 19742 "-" "Mozilla/5.0"
+192.168.1.2 - - [16/May/2026:22:57:30 +0000] "GET /index.html HTTP/1.1" 200 2407 "-" "Mozilla/5.0"
+45.33.32.156 - - [16/May/2026:01:01:15 +0000] "GET /.env HTTP/1.1" 404 1010 "-" "python-requests/2.25"
+45.33.32.156 - - [16/May/2026:06:11:00 +0000] "GET /.env HTTP/1.1" 404 4885 "-" "python-requests/2.25"
+45.33.32.156 - - [16/May/2026:11:18:41 +0000] "GET /.env HTTP/1.1" 404 1695 "-" "python-requests/2.25"
+45.33.32.156 - - [16/May/2026:11:46:31 +0000] "GET /.env HTTP/1.1" 404 3544 "-" "python-requests/2.25"
+45.33.32.156 - - [16/May/2026:12:05:54 +0000] "GET /.env HTTP/1.1" 404 2339 "-" "python-requests/2.25"
+45.33.32.156 - - [16/May/2026:12:15:03 +0000] "GET /.env HTTP/1.1" 404 5015 "-" "python-requests/2.25"
+45.33.32.156 - - [16/May/2026:12:27:12 +0000] "GET /.env HTTP/1.1" 404 1980 "-" "python-requests/2.25"
+45.33.32.156 - - [16/May/2026:13:25:41 +0000] "GET /.env HTTP/1.1" 404 1251 "-" "python-requests/2.25"
+45.33.32.156 - - [16/May/2026:15:01:17 +0000] "GET /.env HTTP/1.1" 404 779 "-" "python-requests/2.25"
+45.33.32.156 - - [16/May/2026:15:35:00 +0000] "GET /.env HTTP/1.1" 404 3354 "-" "python-requests/2.25"
+45.33.32.156 - - [16/May/2026:15:41:10 +0000] "GET /.env HTTP/1.1" 404 309 "-" "python-requests/2.25"
+45.33.32.156 - - [16/May/2026:20:21:57 +0000] "GET /.env HTTP/1.1" 404 167 "-" "python-requests/2.25"
+45.33.32.156 - - [16/May/2026:20:24:46 +0000] "GET /.env HTTP/1.1" 404 5087 "-" "python-requests/2.25"
+45.33.32.156 - - [16/May/2026:23:21:38 +0000] "GET /.env HTTP/1.1" 404 801 "-" "python-requests/2.25"
+45.33.32.156 - - [16/May/2026:23:35:13 +0000] "GET /.env HTTP/1.1" 404 1109 "-" "python-requests/2.25"
+May 01 02:14:06 server sshd[1889]: Invalid user hacker from 172.16.0.200
+May 01 06:33:14 server sshd[2197]: Failed password for admin from 10.0.0.55 port 56981 ssh2
+May 01 07:12:18 server sshd[7465]: Failed password for admin from 10.0.0.55 port 58314 ssh2
+May 01 12:03:56 server sshd[6037]: Failed password for root from 192.168.1.100 port 51415 ssh2
+May 01 14:30:57 server sshd[1733]: Accepted password for user1 from 192.168.1.1 port 59108 ssh2
+May 01 17:55:44 server kernel[4040]: ERROR: Out of memory - process killed
+May 02 00:24:11 server sshd[4732]: Invalid user hacker from 172.16.0.200
+May 02 01:42:39 server systemd[6503]: Started daily cleanup service
+May 02 05:34:09 server kernel[6033]: ERROR: Out of memory - process killed
+May 02 05:55:24 server systemd[1808]: Started daily cleanup service
+May 02 07:23:24 server sshd[1220]: Invalid user hacker from 172.16.0.200
+May 02 17:07:00 server sshd[4256]: Invalid user hacker from 172.16.0.200
+May 02 18:22:53 server sshd[7705]: Accepted password for user1 from 192.168.1.1 port 59146 ssh2
+May 02 21:03:34 server sshd[3857]: Failed password for root from 192.168.1.100 port 51075 ssh2
+May 02 22:03:43 server sshd[7806]: Failed password for admin from 10.0.0.55 port 58632 ssh2
+May 03 01:21:36 server sshd[4146]: Failed password for root from 192.168.1.100 port 56715 ssh2
+May 03 03:05:46 server sshd[3494]: Failed password for root from 192.168.1.100 port 50895 ssh2
+May 03 03:14:36 server sshd[3577]: Invalid user hacker from 172.16.0.200
+May 03 07:07:11 server systemd[5640]: Started daily cleanup service
+May 03 21:28:20 server apache2[3442]: ERROR: Connection refused
+May 04 02:51:59 server sshd[6445]: Failed password for root from 192.168.1.100 port 58843 ssh2
+May 04 04:48:56 server sshd[7320]: Failed password for admin from 10.0.0.55 port 51644 ssh2
+May 04 15:23:13 server sshd[6111]: Accepted password for user1 from 192.168.1.1 port 58269 ssh2
+May 04 16:42:30 server systemd[8370]: Started daily cleanup service
+May 05 05:26:27 server sshd[5889]: Failed password for root from 192.168.1.100 port 56795 ssh2
+May 05 12:50:28 server sshd[8414]: Invalid user hacker from 172.16.0.200
+May 05 20:56:57 server sshd[3486]: Accepted password for user1 from 192.168.1.1 port 59054 ssh2
+May 06 00:10:06 server sshd[2447]: Invalid user hacker from 172.16.0.200
+May 06 09:07:21 server kernel[5691]: ERROR: Out of memory - process killed
+May 06 16:10:51 server sshd[5752]: Failed password for admin from 10.0.0.55 port 54715 ssh2
+May 06 17:58:21 server sshd[1890]: Accepted password for user1 from 192.168.1.1 port 50103 ssh2
+May 06 21:18:56 server sshd[9977]: Accepted password for user1 from 192.168.1.1 port 57683 ssh2
+May 06 22:50:17 server systemd[3529]: Started daily cleanup service
+May 07 11:44:06 server apache2[5692]: ERROR: Connection refused
+May 07 17:51:28 server sshd[7168]: Failed password for admin from 10.0.0.55 port 51892 ssh2
+May 07 23:27:25 server sshd[7130]: Accepted password for user1 from 192.168.1.1 port 59814 ssh2
+May 08 00:27:01 server sshd[8723]: Accepted password for user1 from 192.168.1.1 port 52908 ssh2
+May 08 00:35:17 server systemd[2471]: Started daily cleanup service
+May 08 02:21:28 server kernel[7573]: ERROR: Out of memory - process killed
+May 08 04:19:10 server sshd[5921]: Failed password for root from 192.168.1.100 port 51691 ssh2
+May 08 04:44:03 server kernel[8468]: ERROR: Out of memory - process killed
+May 08 08:18:16 server sshd[1566]: Accepted password for user1 from 192.168.1.1 port 57796 ssh2
+May 08 14:39:19 server kernel[4458]: ERROR: Out of memory - process killed
+May 08 15:26:31 server sshd[6532]: Accepted password for user1 from 192.168.1.1 port 51257 ssh2
+May 08 15:33:48 server sshd[8573]: Accepted password for user1 from 192.168.1.1 port 55970 ssh2
+May 08 16:12:39 server systemd[3160]: Started daily cleanup service
+May 08 17:28:35 server sshd[6725]: Failed password for root from 192.168.1.100 port 58093 ssh2
+May 08 17:47:07 server sshd[5087]: Accepted password for user1 from 192.168.1.1 port 52488 ssh2
+May 08 21:15:10 server sshd[4035]: Failed password for admin from 10.0.0.55 port 59185 ssh2
+May 08 22:24:51 server sshd[8681]: Invalid user hacker from 172.16.0.200
+May 08 22:37:42 server apache2[1159]: ERROR: Connection refused
+May 09 02:15:50 server sshd[9156]: Accepted password for user1 from 192.168.1.1 port 51421 ssh2
+May 09 11:21:22 server kernel[6330]: ERROR: Out of memory - process killed
+May 09 14:28:44 server kernel[6457]: ERROR: Out of memory - process killed
+May 09 16:53:36 server sshd[6108]: Accepted password for user1 from 192.168.1.1 port 51947 ssh2
+May 09 20:32:47 server sshd[3617]: Failed password for root from 192.168.1.100 port 58503 ssh2
+May 10 02:01:35 server apache2[8347]: ERROR: Connection refused
+May 10 03:05:16 server systemd[9439]: Started daily cleanup service
+May 10 05:10:56 server apache2[5365]: ERROR: Connection refused
+May 10 05:45:17 server sshd[3231]: Invalid user hacker from 172.16.0.200
+May 10 16:56:02 server systemd[4590]: Started daily cleanup service
+May 10 19:18:09 server sshd[7130]: Failed password for root from 192.168.1.100 port 56223 ssh2
+May 11 04:49:46 server systemd[4837]: Started daily cleanup service
+May 11 08:04:32 server sshd[1162]: Accepted password for user1 from 192.168.1.1 port 59281 ssh2
+May 11 13:31:23 server systemd[2032]: Started daily cleanup service
+May 11 16:13:16 server sshd[6689]: Invalid user hacker from 172.16.0.200
+May 11 17:03:16 server kernel[8331]: ERROR: Out of memory - process killed
+May 12 13:11:42 server sshd[2202]: Invalid user hacker from 172.16.0.200
+May 12 17:30:55 server sshd[2576]: Invalid user hacker from 172.16.0.200
+May 12 18:20:59 server sshd[9509]: Accepted password for user1 from 192.168.1.1 port 51701 ssh2
+May 12 19:29:19 server sshd[5568]: Failed password for admin from 10.0.0.55 port 53831 ssh2
+May 13 09:17:46 server apache2[6374]: ERROR: Connection refused
+May 14 02:23:51 server sshd[6415]: Accepted password for user1 from 192.168.1.1 port 51264 ssh2
+May 14 05:10:16 server kernel[7127]: ERROR: Out of memory - process killed
+May 14 09:21:26 server sshd[3749]: Accepted password for user1 from 192.168.1.1 port 59486 ssh2
+May 14 09:52:17 server systemd[6159]: Started daily cleanup service
+May 14 10:47:32 server sshd[5968]: Failed password for root from 192.168.1.100 port 54241 ssh2
+May 14 20:46:23 server systemd[3570]: Started daily cleanup service
+May 14 21:59:43 server sshd[5857]: Failed password for root from 192.168.1.100 port 54696 ssh2
+May 15 10:05:16 server sshd[9784]: Accepted password for user1 from 192.168.1.1 port 59222 ssh2
+May 15 16:03:17 server sshd[1163]: Failed password for admin from 10.0.0.55 port 50502 ssh2
+May 15 16:06:14 server systemd[4688]: Started daily cleanup service
+May 15 17:44:00 server systemd[6652]: Started daily cleanup service
+May 15 23:01:45 server sshd[6957]: Invalid user hacker from 172.16.0.200
+May 16 05:29:54 server kernel[8782]: ERROR: Out of memory - process killed
+May 16 05:38:50 server sshd[2745]: Accepted password for user1 from 192.168.1.1 port 57433 ssh2
+May 16 10:38:59 server sshd[1070]: Failed password for admin from 10.0.0.55 port 51920 ssh2
+May 16 17:21:30 server kernel[7370]: ERROR: Out of memory - process killed
+May 17 07:53:40 server sshd[4561]: Failed password for root from 192.168.1.100 port 53534 ssh2
+May 17 10:41:26 server systemd[1877]: Started daily cleanup service
+May 17 13:02:13 server sshd[9377]: Failed password for admin from 10.0.0.55 port 53451 ssh2
+May 17 15:09:42 server sshd[3819]: Failed password for root from 192.168.1.100 port 52349 ssh2
+May 17 18:20:10 server kernel[7188]: ERROR: Out of memory - process killed
+May 17 20:27:15 server sshd[6417]: Accepted password for user1 from 192.168.1.1 port 58380 ssh2
+May 17 22:50:50 server sshd[1262]: Accepted password for user1 from 192.168.1.1 port 54792 ssh2
+May 18 02:19:49 server systemd[2752]: Started daily cleanup service
+May 18 04:40:25 server sshd[6567]: Accepted password for user1 from 192.168.1.1 port 50026 ssh2
+May 19 06:55:44 server sshd[7522]: Failed password for root from 192.168.1.100 port 52367 ssh2
+May 19 10:27:13 server apache2[1460]: ERROR: Connection refused
+May 19 23:31:33 server sshd[5260]: Failed password for root from 192.168.1.100 port 52859 ssh2
+May 20 05:05:57 server apache2[1386]: ERROR: Connection refused
+May 20 08:01:57 server systemd[2116]: Started daily cleanup service
+May 20 14:02:53 server systemd[3323]: Started daily cleanup service
+May 20 15:39:43 server apache2[5173]: ERROR: Connection refused
+May 20 17:37:17 server kernel[6175]: ERROR: Out of memory - process killed
+May 20 21:12:57 server sshd[9057]: Failed password for admin from 10.0.0.55 port 54013 ssh2
+May 20 22:49:42 server sshd[8941]: Failed password for root from 192.168.1.100 port 53585 ssh2
+May 21 19:32:58 server sshd[6104]: Accepted password for user1 from 192.168.1.1 port 51947 ssh2
+May 21 19:58:20 server sshd[1244]: Accepted password for user1 from 192.168.1.1 port 54233 ssh2
+May 22 00:52:05 server systemd[3176]: Started daily cleanup service
+May 22 06:47:51 server sshd[2233]: Accepted password for user1 from 192.168.1.1 port 58065 ssh2
+May 22 13:23:20 server sshd[8044]: Failed password for root from 192.168.1.100 port 53452 ssh2
+May 23 02:16:30 server sshd[7011]: Accepted password for user1 from 192.168.1.1 port 58779 ssh2
+May 23 04:34:02 server kernel[3618]: ERROR: Out of memory - process killed
+May 23 05:17:32 server systemd[5225]: Started daily cleanup service
+May 23 07:25:18 server sshd[6150]: Accepted password for user1 from 192.168.1.1 port 52030 ssh2
+May 24 01:38:31 server kernel[1921]: ERROR: Out of memory - process killed
+May 25 01:07:20 server sshd[8381]: Accepted password for user1 from 192.168.1.1 port 50877 ssh2
+May 25 02:36:40 server sshd[3338]: Failed password for admin from 10.0.0.55 port 52861 ssh2
+May 25 02:54:38 server kernel[7929]: ERROR: Out of memory - process killed
+May 25 03:05:04 server sshd[3682]: Invalid user hacker from 172.16.0.200
+May 25 09:57:03 server systemd[2458]: Started daily cleanup service
+May 25 15:50:58 server sshd[8331]: Accepted password for user1 from 192.168.1.1 port 54110 ssh2
+May 26 05:55:11 server systemd[9809]: Started daily cleanup service
+May 26 16:13:56 server systemd[4226]: Started daily cleanup service
+May 26 16:35:30 server systemd[6352]: Started daily cleanup service
+May 26 19:38:56 server systemd[5086]: Started daily cleanup service
+May 26 23:01:56 server sshd[6448]: Invalid user hacker from 172.16.0.200
+May 27 03:56:39 server sshd[3979]: Failed password for root from 192.168.1.100 port 52685 ssh2
+May 27 08:09:46 server systemd[1960]: Started daily cleanup service
+May 27 12:45:36 server sshd[6086]: Failed password for admin from 10.0.0.55 port 55907 ssh2
+May 27 13:31:05 server apache2[4214]: ERROR: Connection refused
+May 27 19:08:23 server systemd[8004]: Started daily cleanup service
+May 27 21:25:50 server sshd[7465]: Failed password for admin from 10.0.0.55 port 52472 ssh2
+May 27 23:04:19 server systemd[9118]: Started daily cleanup service
+May 27 23:17:41 server kernel[5097]: ERROR: Out of memory - process killed
+May 28 02:40:28 server kernel[3941]: ERROR: Out of memory - process killed
+May 28 13:14:00 server kernel[6698]: ERROR: Out of memory - process killed
+May 28 13:30:20 server systemd[8676]: Started daily cleanup service
+May 28 21:34:00 server sshd[5824]: Failed password for root from 192.168.1.100 port 58557 ssh2
