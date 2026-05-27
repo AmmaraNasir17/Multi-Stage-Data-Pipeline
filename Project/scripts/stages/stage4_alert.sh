@@ -1,13 +1,6 @@
 #!/bin/bash
-# ═══════════════════════════════════════════════════════════
-#  stage4_alert.sh — Alert Generation Stage
-#  Reads aggregated data, applies thresholds,
-#  writes critical/warning alerts, generates final report
-# ═══════════════════════════════════════════════════════════
-
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
-
 source "$PROJECT_ROOT/config.sh"
 source "$UTILS_DIR/logger.sh"
 source "$UTILS_DIR/error_handler.sh"
@@ -15,68 +8,45 @@ source "$UTILS_DIR/checkpoint_manager.sh"
 source "$UTILS_DIR/validator.sh"
 source "$UTILS_DIR/helpers.sh"
 
-# ────────────────────────────────────────
-# ALERT FUNCTION 1 — Check Failed Logins
-# If any IP exceeds threshold → CRITICAL alert
-# ────────────────────────────────────────
 check_failed_login_alerts() {
     log_info "Checking failed login thresholds..."
-
     declare -A ip_counts
-
-    # Count failed logins per IP
     while IFS= read -r ip; do
         [ -n "$ip" ] && ip_counts["$ip"]=$(( ${ip_counts["$ip"]:-0} + 1 ))
     done < <(grep -oE '([0-9]{1,3}\.){3}[0-9]{1,3}' "$FAILED_LOGINS" 2>/dev/null)
-
     for ip in "${!ip_counts[@]}"; do
         local count=${ip_counts[$ip]}
         if [ "$count" -ge "$FAILED_LOGIN_THRESHOLD" ]; then
             local alert="[CRITICAL] $(date '+%Y-%m-%d %H:%M:%S') | BRUTE FORCE DETECTED | IP: $ip | Failed Logins: $count (threshold: $FAILED_LOGIN_THRESHOLD)"
             echo "$alert" | tee -a "$CRITICAL_ALERTS" >> "$ALERTS_LOG"
-            log_warn "CRITICAL ALERT: $ip has $count failed logins!"
+            log_warn "CRITICAL: $ip has $count failed logins"
         else
-            local alert="[WARNING] $(date '+%Y-%m-%d %H:%M:%S') | Elevated failures | IP: $ip | Count: $count"
-            echo "$alert" >> "$WARNING_ALERTS"
+            echo "[WARNING] $(date '+%Y-%m-%d %H:%M:%S') | Elevated failures | IP: $ip | Count: $count" >> "$WARNING_ALERTS"
         fi
     done
 }
 
-# ────────────────────────────────────────
-# ALERT FUNCTION 2 — Check Server Errors
-# If error count exceeds threshold → alert
-# ────────────────────────────────────────
 check_server_error_alerts() {
     log_info "Checking server error thresholds..."
-
     local error_count
     error_count=$(wc -l < "$SERVER_ERRORS" 2>/dev/null || echo 0)
-
     if [ "$error_count" -ge "$ERROR_THRESHOLD" ]; then
         local alert="[CRITICAL] $(date '+%Y-%m-%d %H:%M:%S') | HIGH ERROR RATE | Total Errors: $error_count (threshold: $ERROR_THRESHOLD)"
         echo "$alert" | tee -a "$CRITICAL_ALERTS" >> "$ALERTS_LOG"
-        log_warn "CRITICAL ALERT: $error_count server errors detected!"
+        log_warn "CRITICAL: $error_count server errors detected"
     else
-        local alert="[INFO] $(date '+%Y-%m-%d %H:%M:%S') | Server errors within normal range: $error_count"
-        echo "$alert" >> "$ALERTS_LOG"
-        log_info "Server errors OK: $error_count (below threshold)"
+        echo "[INFO] $(date '+%Y-%m-%d %H:%M:%S') | Server errors normal: $error_count" >> "$ALERTS_LOG"
+        log_info "Server errors OK: $error_count"
     fi
 }
 
-# ────────────────────────────────────────
-# ALERT FUNCTION 3 — Check Suspicious IPs
-# Any IP hitting sensitive paths → alert
-# ────────────────────────────────────────
 check_suspicious_ip_alerts() {
     log_info "Checking suspicious IP activity..."
-
-    # Read IP summary and flag HIGH/CRITICAL risk IPs
     if [ -f "$IP_SUMMARY" ]; then
         while IFS='|' read -r ip count risk; do
-            ip=$(echo "$ip" | tr -d ' ')
+            ip=$(echo "$ip"     | tr -d ' ')
             count=$(echo "$count" | tr -d ' ')
-            risk=$(echo "$risk" | tr -d ' ')
-
+            risk=$(echo "$risk"  | tr -d ' ')
             if [ "$risk" = "CRITICAL" ]; then
                 local alert="[CRITICAL] $(date '+%Y-%m-%d %H:%M:%S') | SUSPICIOUS IP | $ip | $count occurrences | Risk: CRITICAL"
                 echo "$alert" | tee -a "$CRITICAL_ALERTS" >> "$ALERTS_LOG"
@@ -88,69 +58,93 @@ check_suspicious_ip_alerts() {
     fi
 }
 
-# ────────────────────────────────────────
-# GENERATE FINAL REPORT
-# Combines everything into one clean report
-# ────────────────────────────────────────
 generate_final_report() {
     log_info "Generating final summary report..."
-
-    local critical_count warning_count
+    local critical_count warning_count total_lines unique_ips
     critical_count=$(wc -l < "$CRITICAL_ALERTS" 2>/dev/null || echo 0)
-    warning_count=$(wc -l < "$WARNING_ALERTS"  2>/dev/null || echo 0)
+    warning_count=$(wc -l  < "$WARNING_ALERTS"  2>/dev/null || echo 0)
+    total_lines=$(grep -vc "^#" "$RAW_COLLECTED" 2>/dev/null || echo 0)
+    unique_ips=$(grep -oE '([0-9]{1,3}\.){3}[0-9]{1,3}' "$RAW_COLLECTED" 2>/dev/null | sort -u | wc -l)
 
     > "$FINAL_SUMMARY"
     {
-        echo "╔══════════════════════════════════════════════════╗"
-        echo "║        PIPELINE FINAL SUMMARY REPORT            ║"
-        echo "╠══════════════════════════════════════════════════╣"
-        echo "║  Generated: $(date '+%Y-%m-%d %H:%M:%S')               ║"
-        echo "║  Version:   $PIPELINE_VERSION                             ║"
-        echo "╚══════════════════════════════════════════════════╝"
+        echo "========================================================"
+        echo "         SECURITY PIPELINE FINAL REPORT"
+        echo "========================================================"
+        printf "  %-18s : %s\n" "Generated"  "$(date '+%Y-%m-%d %H:%M:%S')"
+        printf "  %-18s : %s\n" "Version"    "$PIPELINE_VERSION"
+        printf "  %-18s : %s\n" "Host"       "$(hostname)"
+        echo "========================================================"
         echo ""
-        echo "── ALERT SUMMARY ──────────────────────────────────"
-        echo "  Critical Alerts:   $critical_count"
-        echo "  Warning Alerts:    $warning_count"
+        echo "--------------------------------------------------------"
+        echo "  EXECUTIVE SUMMARY"
+        echo "--------------------------------------------------------"
+        printf "  %-30s : %s\n" "Total Log Lines Processed"  "$total_lines"
+        printf "  %-30s : %s\n" "Unique IP Addresses"        "$unique_ips"
+        printf "  %-30s : %s\n" "Critical Alerts"            "$critical_count"
+        printf "  %-30s : %s\n" "Warning Alerts"             "$warning_count"
         echo ""
-        echo "── ANOMALY COUNTS ─────────────────────────────────"
-        cat "$ANOMALY_COUNTS" 2>/dev/null
+        echo "--------------------------------------------------------"
+        echo "  ANOMALY BREAKDOWN"
+        echo "--------------------------------------------------------"
+        printf "  %-34s  %s\n" "Anomaly Type" "Count"
+        echo "  ......................................................."
+        grep -E "^(Failed|Invalid|HTTP|System|Sensitive|TOTAL)" "$ANOMALY_COUNTS" 2>/dev/null | while IFS= read -r line; do
+            atype=$(echo "$line" | awk '{$(NF)=""; print}' | sed 's/[[:space:]]*$//')
+            acount=$(echo "$line" | awk '{print $NF}')
+            printf "  %-34s  %s\n" "$atype" "$acount"
+        done
         echo ""
-        echo "── TOP SUSPICIOUS IPs ──────────────────────────────"
-        head -20 "$IP_SUMMARY" 2>/dev/null
+        echo "--------------------------------------------------------"
+        echo "  IP RISK SUMMARY"
+        echo "--------------------------------------------------------"
+        printf "  %-22s  %-12s  %s\n" "IP Address" "Occurrences" "Risk Level"
+        echo "  ......................................................."
+        grep -E "CRITICAL|HIGH|MEDIUM|LOW" "$IP_SUMMARY" 2>/dev/null | while IFS='|' read -r ip count risk; do
+            ip=$(echo "$ip"       | tr -d ' ')
+            count=$(echo "$count" | tr -d ' ')
+            risk=$(echo "$risk"   | tr -d ' ')
+            printf "  %-22s  %-12s  %s\n" "$ip" "$count" "$risk"
+        done
         echo ""
-        echo "── USAGE STATISTICS ────────────────────────────────"
-        cat "$USAGE_STATS" 2>/dev/null
-        echo ""
-        echo "── CRITICAL ALERTS ─────────────────────────────────"
+        echo "--------------------------------------------------------"
+        echo "  CRITICAL ALERTS"
+        echo "--------------------------------------------------------"
         if [ -s "$CRITICAL_ALERTS" ]; then
             cat "$CRITICAL_ALERTS"
         else
             echo "  No critical alerts."
         fi
         echo ""
-        echo "── WARNING ALERTS ──────────────────────────────────"
+        echo "--------------------------------------------------------"
+        echo "  WARNING ALERTS"
+        echo "--------------------------------------------------------"
         if [ -s "$WARNING_ALERTS" ]; then
             cat "$WARNING_ALERTS"
         else
             echo "  No warnings."
         fi
         echo ""
-        echo "────────────────────────────────────────────────────"
-        echo "  Pipeline completed successfully."
-        echo "────────────────────────────────────────────────────"
+        echo "--------------------------------------------------------"
+        echo "  USAGE STATISTICS"
+        echo "--------------------------------------------------------"
+        grep -E "^[A-Za-z]" "$USAGE_STATS" 2>/dev/null | while IFS= read -r line; do
+            key=$(echo "$line" | cut -d: -f1 | xargs)
+            val=$(echo "$line" | cut -d: -f2- | xargs)
+            printf "  %-30s : %s\n" "$key" "$val"
+        done
+        echo ""
+        echo "========================================================"
+        printf "  Pipeline completed at %s\n" "$(date '+%Y-%m-%d %H:%M:%S')"
+        echo "========================================================"
     } >> "$FINAL_SUMMARY"
 
-    # Also write a daily report
     cp "$FINAL_SUMMARY" "$DAILY_REPORT"
-
-    log_success "Final report: $FINAL_SUMMARY"
+    log_success "Final report generated"
 }
 
-# ────────────────────────────────────────
-# MAIN
-# ────────────────────────────────────────
 run_stage4() {
-    log_section "STAGE 4 — Alert Generation"
+    log_stage 4 "Alert Generation"
 
     if checkpoint_exists 4; then
         log_warn "Stage 4 already completed. Skipping."
@@ -162,7 +156,6 @@ run_stage4() {
         exit 1
     fi
 
-    # Clear old alert files before writing fresh ones
     > "$CRITICAL_ALERTS"
     > "$WARNING_ALERTS"
     > "$ALERTS_LOG"
@@ -175,10 +168,16 @@ run_stage4() {
     local critical_count
     critical_count=$(wc -l < "$CRITICAL_ALERTS" 2>/dev/null || echo 0)
 
-    log_success "Stage 4 Complete!"
-    log_info "Critical alerts:  $critical_count"
-    log_info "Alerts log:       $ALERTS_LOG"
-    log_info "Final report:     $FINAL_SUMMARY"
+    echo ""
+    echo -e "${CYAN}  ------------------------------------------------${NC}"
+    echo -e "${CYAN}  STAGE 4 RESULTS${NC}"
+    echo -e "${CYAN}  ------------------------------------------------${NC}"
+    printf  "  %-25s : ${RED}%s${NC}\n"    "Critical Alerts"    "$critical_count"
+    printf  "  %-25s : ${YELLOW}%s${NC}\n" "Warning Alerts"     "$(wc -l < "$WARNING_ALERTS")"
+    printf  "  %-25s : ${WHITE}%s${NC}\n"  "Alerts Log"         "output/alerts/alerts.log"
+    printf  "  %-25s : ${WHITE}%s${NC}\n"  "Final Report"       "output/reports/final_summary.txt"
+    echo -e "${CYAN}  ------------------------------------------------${NC}"
+    echo ""
 
     save_checkpoint 4
 }
